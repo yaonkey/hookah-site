@@ -10,10 +10,10 @@ and open the template in the editor.
         <title>Страница не найдена</title>
     </head>
     <body>
+        <div align='center'>
         <h2>Страница не найдена!</h2>
-        <p>Ошибка 404</p>
-        <?php
-        // put your code here
-        ?>
+        <img src='404.png' alt='404'>
+       
+        </div>
     </body>
 </html>

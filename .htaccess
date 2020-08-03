@@ -8,4 +8,4 @@ RewriteRule ^(.*)$ index.php
 php_flag display_errors on
 # DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:14148816:
 
-#ErrorDocument 404 /models/404.php
+ErrorDocument 404 /models/404.php

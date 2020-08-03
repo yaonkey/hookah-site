@@ -12,6 +12,7 @@ class Router
      * @var array 
      */
     private $routes;
+    public $noneFound = false;
 
     /**
      * Конструктор
@@ -32,6 +33,8 @@ class Router
     {
         if (!empty($_SERVER['REQUEST_URI'])) {
             return trim($_SERVER['REQUEST_URI'], '/');
+        }else{
+            $this->noneFound = true;
         }
     }
 
@@ -83,8 +86,15 @@ class Router
                 // Если метод контроллера успешно вызван, завершаем работу роутера
                 if ($result != null) {
                     break;
+                }else{
+                    $this->noneFound = true;
                 }
             }
+            
+            
+        }
+        if ($this->noneFound){
+            include 'models/404.php';
         }
     }
 
