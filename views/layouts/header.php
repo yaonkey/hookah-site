@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Ru-Apps-Market</title>
+        <title>Hookah</title>
         <link rel="icon" href="/template/images/home/logo.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/template/images/home/logo.ico" type="image/x-icon" />
         <link href="/template/css/bootstrap.min.css" rel="stylesheet">
