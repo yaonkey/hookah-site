@@ -3,7 +3,7 @@
 <section>
     <div class="container">
         <div class="row">
-
+            <div class="col-sm-4 col-sm-offset-4">
             <br/>
 
             <div class="breadcrumbs">
@@ -23,7 +23,7 @@
             <form method="post">
                 <input type="submit" name="submit" value="Удалить" />
             </form>
-
+            </div>
         </div>
     </div>
 </section>

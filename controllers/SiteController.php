@@ -15,7 +15,7 @@ class SiteController
         //$categories = Category::getCategoriesList();
 
         // Список последних товаров
-        $latestProducts = Product::getNewProducts(3);
+        $latestProducts = Product::getNewProducts(6);
 
         // Список товаров для слайдера
         $sliderProducts = Product::getRecommendedProducts();
@@ -40,7 +40,7 @@ class SiteController
         if (isset($_POST['submit'])) {
             // Если форма отправлена 
             // Получаем данные из формы
-            $userEmail = $_POST['email'];
+            $userEmail = $_POST['userEmail'];
             $userText = $_POST['userText'];
 
             // Флаг ошибок
@@ -54,7 +54,7 @@ class SiteController
             if ($errors == false) {
                 // Если ошибок нет
                 // Отправляем письмо администратору 
-                $adminEmail = 'admin@ru-apps-market.zzz.com.ua';#'ruappsmarket@yandex.ru';
+                $adminEmail = 'thesuperuserstyle@gmail.com';
                 $message = "Текст: {$userText}. От {$userEmail}";
                 $subject = 'Тема письма';
                 $result = mail($adminEmail, $subject, $message);

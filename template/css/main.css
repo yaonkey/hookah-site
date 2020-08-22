@@ -76,6 +76,46 @@ a#scrollUp i{
     font-size: 30px;
 }
 
+/*************************
+*******Age warning******
+**************************/
+
+div#age-warning-frame{
+    margin-top: 0px;
+    padding-top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 99999;
+    display: block;  /* <== change it */ 
+    border: 1px solid red;
+    border-radius: 2em;
+    position: fixed;
+    background-color: rgba(84, 60, 60, 0.5);
+    justify-content: center;
+}
+h3#age-warning-header{
+    text-align: center;
+    color: red;
+    background-color: black;
+}
+p#age-warning-text{
+    font-size: 15px;
+    text-align: center;
+    background-color: rgba(143, 143, 143, 0.8);
+}
+div#age-warning-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 37%;
+    margin-right: 37%;
+}
+input#age-warning-yes-but{
+    margin-bottom: 8px;
+}
+input#age-warning-no-but{
+    
+}
 
 /*************************
 *******Header CSS******
@@ -90,7 +130,7 @@ a#scrollUp i{
     left: 0;
     width: 100%;
     height: 40px;
-    z-index: 9999;
+    z-index: 9998;
     display: block;
     pointer-events: auto;
     letter-spacing: normal;
@@ -252,8 +292,10 @@ a#scrollUp i{
 
 
 .header-bottom {
-    padding-bottom: 30px;
-    padding-top: 30px;
+    background: rgba(0,0,0,0.8);
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    padding-top: 15px;
 }
 
 .navbar-collapse.collapse{
@@ -266,7 +308,7 @@ a#scrollUp i{
 }
 
 .mainmenu ul li:first-child{
-    padding-left: 0px;
+    padding-left: 15px;
 }
 
 .mainmenu ul li a {
@@ -275,11 +317,14 @@ a#scrollUp i{
     font-size: 17px;
     font-weight: 300;
     padding: 0;
-    padding-bottom: 10px;
-    
+    margin-top: 10px;
+    margin-left: 5px;
 }
 
-.mainmenu ul li a:hover, .mainmenu ul li a.active,  .shop-menu ul li a.active{
+
+
+
+.mainmenu ul li a:hover, .mainmenu ul li a:active,  .shop-menu ul li a.active{
     background:none;
     color:#6A5ACD;
 }
@@ -330,7 +375,7 @@ ul.sub-menu {
     position: absolute;
     top: 30px;
     left: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 1);
     list-style: none;
     padding: 0;
     margin: 0;
@@ -356,7 +401,7 @@ ul.sub-menu {
 }
 
 .navbar-nav li ul.sub-menu li a{
-    color: #fff;
+    color: #333;
 }
 
 .navbar-nav li ul.sub-menu li a:hover{
@@ -387,7 +432,7 @@ ul.sub-menu {
 
 #footer {
     background: rgba(0,0,0,0.8);
-    height: 50px;
+    height: 80px;
 }
 
 
@@ -552,6 +597,7 @@ ul.sub-menu {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     margin-top: 0;
+    margin-bottom: 5px;
     outline: medium none;
     padding: 7px;
     width: 212px;
@@ -563,8 +609,8 @@ ul.sub-menu {
     color: #696763;
     border: medium none;
     border-radius: 0;
-    margin-left: -5px;
-    margin-top: -2px;
+    margin-left: 1px;
+    margin-top: 2px;
     padding: 7px 17px;
     font-weight: 500;
 }
@@ -589,7 +635,7 @@ ul.sub-menu {
 }
 
 .footer-bottom {
-    padding-top: 15px;
+    padding-top: 2.5%;
 }
 
 .footer-bottom p {
@@ -694,6 +740,10 @@ ul.sub-menu {
 
 .right {
     right: 0;
+}
+
+ul.dropdown-menu li a:hover{
+    background-color: #6A5ACD;
 }
 
 .category-products {
@@ -896,7 +946,7 @@ h2.title {
     border:1px solid #F7F7F5;
     overflow: hidden;
     margin-bottom:30px;
-    height: 450px;
+    height: 500px;
 }
 
 .single-products {
@@ -1597,6 +1647,7 @@ h2.title {
     background:#6A5ACD;
     color: #FFFFFF;
     padding: 3px 7px;
+    margin-bottom: 5px;
 }
 
 /*.breadcrumbs .breadcrumb li a:after {

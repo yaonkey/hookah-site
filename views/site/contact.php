@@ -4,10 +4,13 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-sm-4 col-sm-offset-4 padding-right">
+            <div class="col-sm-10 col-sm-offset-4">
 
                 <?php if ($result): ?>
                     <p>Сообщение отправлено! Мы ответим Вам на указанный email.</p>
+                    <a href="/" class="btn btn-default">
+                                        <i class="fa fa-home"></i> Домой
+                                    </a>
                 <?php else: ?>
                     <?php if (isset($errors) && is_array($errors)): ?>
                         <ul>

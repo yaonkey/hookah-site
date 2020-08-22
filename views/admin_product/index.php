@@ -3,7 +3,7 @@
 <section>
     <div class="container">
         <div class="row">
-
+            <div class="col-sm-4 col-sm-offset-4">
             <br/>
 
             <div class="breadcrumbs">
@@ -45,7 +45,7 @@
                     </tr>
                 <?php endforeach; ?>
             </table>
-
+            </div>
         </div>
     </div>
 </section>

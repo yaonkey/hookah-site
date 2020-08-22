@@ -3,7 +3,7 @@
 <section>
     <div class="container">
         <div class="row">
-
+            <div class="col-sm-10 col-sm-offset-4">
             <br/>
 
             <div class="breadcrumbs">
@@ -78,7 +78,8 @@
 
             <a href="/admin/order/" class="btn btn-default back"><i class="fa fa-arrow-left"></i> Назад</a>
         </div>
-
+        </div>
+    </div>
 
 </section>
 

@@ -26,7 +26,7 @@
         <div class="page-wrapper">
 
             <header id="header"><!--header-->
-                <div class="header_top"><!--header_top-->
+                <div class="header-bottom"><!--header_top-->
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-6">

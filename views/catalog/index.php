@@ -1,25 +1,16 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
+<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>-->
 
 <section>
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
                 <div class="left-sidebar">
-                    <h2>Категории</h2>
-                    <div class="panel-group category-products">
-                        <?php foreach ($categories as $categoryItem): ?>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="/category/<?php echo $categoryItem['id'];?>">
-                                            <?php echo $categoryItem['name'];?>
-                                        </a>
-                                    </h4>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
+                    
+                   <?php include_once ROOT . '/views/layouts/categoryView.php'; ?> 
+            
                 </div>
             </div>
 
@@ -29,7 +20,7 @@
                     
 <!--                    реализация поиска-->
                     <form name="search" method="post"  class='searchform' action="search" style='padding-left: 15px; padding-bottom: 15px;'>
-                        <input type="search" name="query" placeholder="Поиск">
+                        <input style='margin-right: 5px; margin-bottom: 5px;' type="search" name="query" placeholder="Поиск">
                         <button type="submit">Найти</button> 
                         <label for="search"><?php echo $searchError; ?></label>
                     </form>
@@ -62,6 +53,8 @@
 
                 </div><!--features_items-->
                    
+                <!-- Постраничная навигация -->
+                 <?php echo $pagination->get(); ?>
 
             </div>
         </div>

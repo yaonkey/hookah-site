@@ -1,11 +1,29 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
+<!--        age-warning-frame-->
+        <div id='age-warning-frame'>
+            <h3 id='age-warning-header'><strong>А ВАМ ЕСТЬ 18?</strong></h3>
+            <p id='age-warning-text'>
+                Наш сайт представляет собой каталог для совершеннолетних потребителей табачной
+                продукции (граждан России старше 18 лет). <br>
+                Мы предоставляем информацию об основных потребительских свойствах
+                и характеристиках табачной продукции.<br>
+                Лицам, не достигшим совершеннолетия, пользование сайтом запрещено!
+            </p>
+            <div id='age-warning-buttons'>
+                <input type="submit" value='Да' id='age-warning-yes-but'>
+                <input type='button' value='Нет' id='age-warning-no-but'>
+            </div>  
+            
+        </div>
+
 <section>
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
                 <div class="left-sidebar">
-                    <h2>Обсуждение</h2>
+                    
+<!--                    <h2>Обсуждение</h2>
                     
                     
                     <div id="disqus_thread"></div>
@@ -30,7 +48,7 @@ s.setAttribute('data-timestamp', +new Date());
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                                                         
                     
-                    
+                    -->
                 </div>
             </div>
             
@@ -65,7 +83,7 @@ s.setAttribute('data-timestamp', +new Date());
                 </div><!--features_items-->
 
                 
-            <div class="recommended_items"><!--recommended_items-->
+<!--            <div class="recommended_items">recommended_items
                     <h2 class="title text-center">Рекомендации</h2>
                     <div class="cycle-slideshow" 
                          data-cycle-fx=carousel
@@ -107,11 +125,28 @@ s.setAttribute('data-timestamp', +new Date());
                     </a>
 
                 </div>
-            </div><!--/recommended_items-->
+            </div>/recommended_items-->
                 
         </div>
     </div>
+        
 
 </section>
+
+<script>
+    // age checking script
+    $(document).ready(function(){
+        if (sessionStorage['checkAge'] == 'yes'){
+            $('#age-warning-frame').css({display: "none"});
+        }
+        $('#age-warning-yes-but').click(function(){ // on "yes" click
+            $('#age-warning-frame').css({display: "none"});
+            sessionStorage['checkAge'] = 'yes';
+        });
+        $('#age-warning-no-but').click(function(){ // on "no" click
+            sessionStorage['checkAge'] = 'no';
+        });
+    });
+</script>
 
 <?php include ROOT . '/views/layouts/footer.php'; ?>

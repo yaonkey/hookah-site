@@ -6,6 +6,16 @@
  */
 class AdminCategoryController extends AdminBase
 {
+    
+    /**
+     * Action для страницы "Управление заголовками"
+     */
+    public function actionCreateHeader(){
+        self::checkAdmin();
+     
+        require_once(ROOT . '/views/admin_category/createHeader.php');
+        return true;
+    }
 
     /**
      * Action для страницы "Управление категориями"
@@ -45,6 +55,7 @@ class AdminCategoryController extends AdminBase
             $name = $_POST['name'];
             $sortOrder = $_POST['sort_order'];
             $status = $_POST['status'];
+            $type = $_POST['type'];
 
             // Флаг ошибок в форме
             $errors = false;
@@ -58,7 +69,7 @@ class AdminCategoryController extends AdminBase
             if ($errors == false) {
                 // Если ошибок нет
                 // Добавляем новую категорию
-                Category::createCategory($name, $sortOrder, $status);
+                Category::createCategory($name, $sortOrder, $status, $type);
 
                 // Перенаправляем пользователя на страницу управлениями категориями
                 header("Location: /admin/category");
@@ -87,9 +98,10 @@ class AdminCategoryController extends AdminBase
             $name = $_POST['name'];
             $sortOrder = $_POST['sort_order'];
             $status = $_POST['status'];
+            $type = $_POST['type'];
 
             // Сохраняем изменения
-            Category::updateCategoryById($id, $name, $sortOrder, $status);
+            Category::updateCategoryById($id, $name, $sortOrder, $status, $type);
 
             // Перенаправляем пользователя на страницу управлениями категориями
             header("Location: /admin/category");

@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-sm-4 col-sm-offset-4 padding-right">
+            <div class="col-sm-4 col-sm-offset-4">
                 
                 <?php if ($result): ?>
                     <p>Вы зарегистрированы!</p>

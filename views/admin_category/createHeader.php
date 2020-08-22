@@ -10,12 +10,12 @@
                 <ol class="breadcrumb">
                     <li><a href="/admin">Админпанель</a></li>
                     <li><a href="/admin/order">Управление категориями</a></li>
-                    <li class="active">Добавить категорию</li>
+                    <li class="active">Добавить заголовок</li>
                 </ol>
             </div>
 
 
-            <h4>Добавить новую категорию</h4>
+            <h4>Добавить новый заголовок для категории</h4>
 
             <br/>
 
@@ -41,15 +41,6 @@
                         <select name="status">
                             <option value="1" selected="selected">Отображается</option>
                             <option value="0">Скрыта</option>
-                        </select>
-                        
-                        <p>Тип товара</p>
-                        <select name="type">
-                            <option value="0" selected="selected">Аксессуары</option>
-                            <option value="1">Кальяны</option>
-                            <option value="2">Уголь</option>
-                            <option value="3">Чаши</option>
-                            <option value="4">Кальянные смеси</option>
                         </select>
 
                         <br><br>

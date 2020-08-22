@@ -3,7 +3,7 @@
 <section>
     <div class="container">
         <div class="row">
-
+            <div class="col-sm-10 col-sm-offset-4">
             <br/>
 
             <div class="breadcrumbs">
@@ -97,7 +97,7 @@
                     </form>
                 </div>
             </div>
-
+            </div>
         </div>
     </div>
 </section>

@@ -10,16 +10,21 @@ class CatalogController
     /**
      * Action для страницы "Каталог товаров"
      */
-    public function actionIndex()
+    public function actionIndex($page = 1)
     {
         $searchError = false;
         $categories = Category::getCategoriesList();
         if (!empty($_POST['query'])) { 
             $latestProducts = Product::search($_POST['query']); 
         }else{
-            $latestProducts = Product::getLatestProducts(999);
+            $latestProducts = Product::getLatestProducts($page, Product::SHOW_BY_DEFAULT);
         }   
-         
+        
+        
+        
+         $total = Category::getTotalPages();
+        $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT, 'page-');
+        
         // Список категорий для левого меню
        
 

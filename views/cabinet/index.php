@@ -3,6 +3,7 @@
 <section>
     <div class="container">
         <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
 
             <h3>Кабинет пользователя</h3>
             
@@ -13,6 +14,7 @@
                     echo "<li><a class='btn btn-default' href='/admin'>Админпанель</a></li>";
                 }?>
             </ul>
+            </div>
             
         </div>
     </div>

@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <p class="pull-right"> <a href="/contacts/"><i class="fa fa-phone"></i> Контакты</a></p>
-                <p class="pull-left"><a href="mailto:ruappsmarket@yandex.ru"><i class="fa fa-envelope"></i> ruappsmarket@yandex.ru</a></p>
+                <p class="pull-left"><a href="mailto:ruappsmarket@yandex.ru"><i class="fa fa-envelope"></i> Написать</a></p>
             </div>
         </div>
     </div>

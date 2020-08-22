@@ -4,10 +4,17 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-sm-4 col-sm-offset-4 padding-right">
+            <div class="col-sm-10 col-sm-offset-4">
                 
                 <?php if ($result): ?>
-                    <p>Данные отредактированы!</p>
+                    <h3>Данные отредактированы!</h3>
+                    <a href="/" class="btn btn-default">
+                                        <i class="fa fa-home"></i> Домой
+                                    </a>
+                    <a href="/cabinet/" class="btn btn-default">
+                                        <i class="fa fa-user"></i> Кабинет
+                                    </a>
+                    
                 <?php else: ?>
                     <?php if (isset($errors) && is_array($errors)): ?>
                         <ul>

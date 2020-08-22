@@ -1,5 +1,5 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
-
+<!--
 <style>
 * {box-sizing: border-box;}
 
@@ -79,27 +79,14 @@
     return {x : x, y : y};
   }
 }
-</script>
+</script>-->
 
 <section>
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
                 <div class="left-sidebar">
-                    <h2>Категории</h2>
-                    <div class="panel-group category-products">
-                        <?php foreach ($categories as $categoryItem): ?>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="/category/<?php echo $categoryItem['id']; ?>">
-                                            <?php echo $categoryItem['name']; ?>
-                                        </a>
-                                    </h4>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
+                    
                 </div>
             </div>
 
@@ -141,7 +128,7 @@
                         
                         
                         <div id="disqus_thread" style="margin-left: 30px; margin-right: 30px; margin-top: 30px;"></div>
-<script>
+<!--<script>
 
 /**
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -160,7 +147,7 @@ s.setAttribute('data-timestamp', +new Date());
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                                                        
+                                                        -->
                         
                         
                     </div>
@@ -172,8 +159,8 @@ s.setAttribute('data-timestamp', +new Date());
 </section>
 
 
-<script>
+<!--<script>
 magnify("basic", 3);
-</script>
+</script>-->
 
 <?php include ROOT . '/views/layouts/footer.php'; ?>

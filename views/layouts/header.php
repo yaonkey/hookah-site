@@ -7,6 +7,9 @@
         <meta name="author" content="">
         <title>Hookah</title>
         <link rel="icon" href="/template/images/home/logo.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
         <link rel="shortcut icon" href="/template/images/home/logo.ico" type="image/x-icon" />
         <link href="/template/css/bootstrap.min.css" rel="stylesheet">
         <link href="/template/css/font-awesome.min.css" rel="stylesheet">
@@ -26,7 +29,7 @@
     <body>
         <div class="page-wrapper">
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>-->
 <script type="text/javascript">
 
 $(function() {
@@ -62,15 +65,13 @@ $(function() {
             
             
             <header id="header"><!--header-->
-                <div class="header_top"><!--header_top-->
+<!--                <div class="header_top">header_top
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="contactinfo">
                                     <ul class="nav nav-pills">
-                                        <li><div class="logo pull-left">
-                                    <a href="/"><img src="/template/images/home/logo.png" alt="" /></a>
-                                </div></li>
+                                        LOGO
                                         <li><a href="/"><i class="fa fa-home"></i> Главная</a></li>
                                         <li><a href="/catalog/"><i class="fa fa-dollar"></i> Купить</a></li>
                                         <li><a href="/cart">
@@ -100,10 +101,10 @@ $(function() {
                             </div>
                         </div>
                     </div>
-                </div><!--/header_top-->
+                </div>/header_top-->
 
                 
-                <div class="header-bottom"><!--header-bottom-->
+                <div class="header-bottom"><!--header-bottom and active layout-->
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12">
@@ -113,11 +114,31 @@ $(function() {
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
                                     </button>
                                 </div>
                                 <div class="mainmenu pull-left">
                                     <ul class="nav navbar-nav collapse navbar-collapse">
-                                        
+                                        <li><div class="logo pull-left">
+                                    <a href="/"><img src="/template/images/home/logo.png" alt="" /></a>
+                                </div></li>
+                                        <li><a href="/"><i class="fa fa-home"></i> Главная</a></li>
+                                        <li><a>
+                                            <?php include ROOT.'/views/layouts/categoryView.php'; ?>
+                                        </a></li>
+                                        <li><a href="/cart">
+                                                <i class="fa fa-shopping-cart"></i> Корзина 
+                                                    [<span id="cart-count"><?php echo Cart::countItems(); ?></span>]
+                                            </a>
+                                        </li>
+                                        <?php if (User::isGuest()): ?>                                        
+                                            <li><a href="/user/login/"><i class="fa fa-lock"></i> Вход</a></li>
+                                            <li><a href="/user/register/"><i class="fa fa-lock"></i> Регистрация</a></li>
+                                        <?php else: ?>
+                                            <li><a href="/cabinet/"><i class="fa fa-user"></i> Аккаунт</a></li>
+                                            <li><a href="/user/logout/"><i class="fa fa-unlock"></i> Выход</a></li>
+                                        <?php endif; ?>
+                                            <li><a href="/about/"><i class="fa fa-info-circle"></i> О нас</a></li>
                                     </ul>
                                 </div>
                             </div>

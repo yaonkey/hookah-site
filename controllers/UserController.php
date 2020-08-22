@@ -48,7 +48,7 @@ class UserController
                 // Регистрируем пользователя
                 $result = User::register($name, $email, $password);
                 if (strlen($result) == 0){
-                    header("Location: /cabinet");
+                        header("Location: /");
                 }
             }
         }
@@ -96,7 +96,8 @@ class UserController
                 User::auth($userId);
 
                 // Перенаправляем пользователя в закрытую часть - кабинет 
-                header("Location: /cabinet");
+                //header("Location: /cabinet");
+                header("Location: /");
             }
             
         }
